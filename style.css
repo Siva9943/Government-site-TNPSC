@@ -1,0 +1,156 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  width: 100%;
+}
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%; /* positions directly below */
+  left: 0;
+  background-color: #fff;
+  min-width: 220px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-menu ul li:hover .sub-menu {
+  display: block;
+}
+.container1 {
+  width: 98%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  width: 98%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  border: 2px solid black;
+}
+
+.nav img {
+  height: 100px;
+}
+
+.header-menu {
+  width: 98%;
+  border: 2px solid black;
+  background-color: #1a6194;
+  position: relative;
+}
+
+.header-menu ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-menu ul li {
+  position: relative;
+}
+
+.header-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  padding: 10px 13px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-menu ul li a:hover {
+  background-color: #fff;
+  border-radius: 3px;
+  color: #1a6194;
+}
+
+.active a {
+  font-weight: bold;
+}
+
+.down {
+  margin-left: 3px;
+  font-size: 10px;
+}
+
+/* Sub-menu (second level) */
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  z-index: 1000;
+  min-width: 220px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-menu ul li:hover .sub-menu {
+  display: block;
+}
+
+.sub-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.sub-menu ul li {
+  border-bottom: 0.1px solid #eee;
+  position: relative;
+}
+
+.sub-menu ul li a {
+  color: #1a6194;
+  padding: 8px;
+  display: block;
+}
+
+.sub-menu ul li a:hover {
+  background-color: #1a6194;
+  color: white;
+}
+
+/* Super-sub (third level) */
+.super-sub {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #fff;
+  min-width: 200px;
+  z-index: 1001;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sub-menu li:hover .super-sub {
+  display: block;
+}
+
+.super-sub ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.super-sub ul li a {
+  color: #1a6194;
+  padding: 8px;
+  display: block;
+}
+
+.super-sub ul li a:hover {
+  background-color: #1a6194;
+  color: white;
+}
