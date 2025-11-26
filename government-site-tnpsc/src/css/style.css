@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --text-color: #1a6194;
+  --hover-text: #1a6194;
+  --hover-background: #1a6194;
+  --body-background: rgb(223, 225, 223);
+  --background: #fff;
+  --border: black;
+  --trans-gray: rgba(128, 128, 128, 0.45);
+}
+
+body {
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 5px;
+  background-color: var(--body-background);
+}
+
+.nav {
+  width: 98%;
+  margin: auto;
+  padding: 0 10px;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.nav img {
+  height: 60px; /* Adjusted for mobile fit */
+}
+
+.menu-button {
+  background-color: var(--hover-background);
+  color: var(--background);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.sub-menu {
+  display: none;
+  flex-direction: column;
+  background-color: var(--background);
+  min-width: 220px;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sub-menu.active {
+  display: flex;
+}
+
+.header-menu {
+  width: 98%;
+  box-shadow: 5px 5px 20px black;
+  background-color: var(--hover-background);
+  position: relative;
+  margin: auto;
+}
+
+.header-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Changed to column for vertical alignment */
+}
+
+.header-menu ul li {
+  position: relative;
+}
+
+.header-menu ul li a {
+  text-decoration: none;
+  color: var(--background);
+  font-size: 15px;
+  padding: 10px 13px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-menu ul li a:hover {
+  background-color: var(--background);
+  border-radius: 3px;
+  color: var(--hover-background);
+}
+
+/* Media Queries */
+@media (max-width: 720px) {
+  .nav {
+    padding: 12px;
+    align-items: center;
+  }
+
+  .menu-button {
+    width: 100%;
+  }
+
+  .sub-menu {
+    position: static;
+    box-shadow: none;
+  }
+
+  .header-menu ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .header-menu ul li a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 12px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 420px) {
+  .nav img {
+    height: 48px; /* Further adjustment for smaller screens */
+  }
+}

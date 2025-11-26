@@ -1,0 +1,23 @@
+{
+  "name": "government-site-tnpsc",
+  "version": "1.0.0",
+  "description": "A government site for TNPSC with a responsive navigation bar and user-friendly interface.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build process not defined'",
+    "test": "echo 'No tests defined'"
+  },
+  "keywords": [
+    "government",
+    "tnpsc",
+    "responsive",
+    "navbar"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
